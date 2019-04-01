@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tiny Cakes!</title>
+  <link rel="stylesheet" href="tinycakes.css" />
+</head>
+
+<body>
+
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+
+  <div class="container">
+    <h1 id="sitetitle">Tiny Cakes!</h1>
+    <p>
+      Welcome to <em>my</em> recipes web site all
+      about <strong>Tiny Cakes!</strong>
+    </p>
+
+    <h2>Recipes</h2>
+    <p>
+      Here are the recipes that we have:
+    </p>
+
+    <ul>
+  <% recipes.forEach(function(recipe){ %>
+    <li><a href="/recipe/<%= recipe.id %>"><%= recipe.name %></a></li>
+  <% }) %>
+    </ul>
+
+  </div>
+</body>
+
+</html>

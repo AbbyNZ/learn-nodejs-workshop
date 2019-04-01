@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tiny Cakes! | Admin</title>
+      <link rel="stylesheet" href="/tinycakes.css" />
+  </head>
+  <body>
+
+    <% include ../../partials/header %>
+
+    <div class="container">
+      <h1>Editing: <%= recipe.name %></h1>
+      <form method="post" action="/admin/recipe/<%= recipe.id %>">
+        <% include ../../partials/admin/recipe_form %>
+      </form>
+  </div>
+  </body>
+</html>
